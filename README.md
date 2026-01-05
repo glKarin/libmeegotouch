@@ -1,2 +1,2 @@
-# meegotouch_api
+# libmeegotouch
 MeeGo Touch API developer documentation

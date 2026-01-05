@@ -1,0 +1,298 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Settings Language Documentation</title>
+<link href="meegotouch.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table><tr>
+<td></td>
+<td>
+<a href="index.html">Home</a>
+              ·
+              <a href="namespaces.html">All Namespaces</a>
+              ·
+              <a href="classes.html">All Classes</a>
+              ·
+              <a href="mainclasses.html">Main Classes</a>
+              ·
+              <a href="deprecated.html">Deprecated</a>
+</td>
+</tr></table>
+<div class="contents">
+<h1>Settings Language Documentation</h1>
+<div class="settingsLanguageElement" id="settings">
+<h2>Root element: settings</h2>
+<h3>Documentation</h3>
+<p>A set of settings.</p>
+<h3>Content Model</h3>
+<p>
+  
+
+  
+    Any combination of:
+    <ul>
+    <li>
+      <a href="#settings.group">group</a>
+     (any number)</li>
+
+    <li>
+      <a href="#settings.selection">selection</a>
+     (any number)</li>
+
+    <li>
+      <a href="#settings.text">text</a>
+     (any number)</li>
+
+    <li>
+      <a href="#settings.boolean">boolean</a>
+     (any number)</li> 
+
+    <li>
+      <a href="#settings.integer">integer</a>
+     (any number)</li> 
+ </ul>
+</p>
+</div>
+    
+      <div class="settingsLanguageElement" id="settings.group">
+<h2>Element: group</h2>
+<h3>Documentation</h3>
+<p>A settings node representing a group of setting items. 
+        A group can contain one or more setting items.
+        </p>
+<h3>Content Model</h3>
+<p>
+      
+        <li>
+          <a>selection</a>
+         (any number)</li>
+        <li>
+          <a>text</a>
+         (any number)</li>
+        <li>
+          <a>boolean</a>
+         (any number)</li>
+        <li>
+          <a>integer</a>
+         (any number)</li>
+      </p>
+</div>
+          
+        
+          
+        
+          
+        
+          
+        
+    
+
+    
+      <div class="settingsLanguageElement" id="settings.selection">
+<h2>Element: selection</h2>
+<h3>Documentation</h3>
+<p>A settings node representing a selection. A
+          selection can have a predefined set of possible options.</p>
+<h3>Content Model</h3>
+<p>
+        
+        
+        <li>
+          <a href="#settings.selection.option">option</a>
+         (at least one)</li>
+      </p>
+<h3>Attributes</h3>
+<table class="settingsLanguageAttributes">
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Use</th>
+<th>Documentation</th>
+</tr>
+<tr>
+<td>key</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The key (name) of the selection.</td>
+</tr>
+</table>
+</div>
+          <div class="settingsLanguageElement" id="settings.selection.option">
+<h2>Element: option</h2>
+<h3>Documentation</h3>
+<p>A possible value for a selection.</p>
+<h3>Content Model</h3>
+<p>
+            
+            The type must be an integer.
+            
+          </p>
+<h3>Attributes</h3>
+<table class="settingsLanguageAttributes">
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Use</th>
+<th>Documentation</th>
+</tr>
+<tr>
+<td>title</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The title of the option. Used as a translation id or as such if translation not found.</td>
+</tr>
+</table>
+</div>
+              
+            
+        
+    
+
+    
+      <div class="settingsLanguageElement" id="settings.text">
+<h2>Element: text</h2>
+<h3>Documentation</h3>
+<p>A settings node representing text. A text item can contain any string data.</p>
+<h3>Content Model</h3>
+<p>
+        
+        
+        
+      </p>
+<h3>Attributes</h3>
+<table class="settingsLanguageAttributes">
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Use</th>
+<th>Documentation</th>
+</tr>
+<tr>
+<td>key</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The key (name) of the text item.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The title of the text item. Used as a translation id or as such if translation not found.</td>
+</tr>
+</table>
+</div>
+    
+
+    
+      <div class="settingsLanguageElement" id="settings.boolean">
+<h2>Element: boolean</h2>
+<h3>Documentation</h3>
+<p>A settings node representing boolean.</p>
+<h3>Content Model</h3>
+<p>
+        
+        
+        
+      </p>
+<h3>Attributes</h3>
+<table class="settingsLanguageAttributes">
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Use</th>
+<th>Documentation</th>
+</tr>
+<tr>
+<td>key</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The key (name) of the boolean item.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The title of the boolean item. Used as a translation id or as such if translation not found.</td>
+</tr>
+</table>
+</div>
+     
+
+    
+      <div class="settingsLanguageElement" id="settings.integer">
+<h2>Element: integer</h2>
+<h3>Documentation</h3>
+<p>A settings node representing an integer from a range.</p>
+<h3>Content Model</h3>
+<p>
+        
+        
+        
+        
+        
+      </p>
+<h3>Attributes</h3>
+<table class="settingsLanguageAttributes">
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Use</th>
+<th>Documentation</th>
+</tr>
+<tr>
+<td>key</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The key (name) of the integer.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>The title of the integer. Used as a translation id or as such if translation not found.</td>
+</tr>
+<tr>
+<td>min</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>Minimum value that the integer can have.</td>
+</tr>
+<tr>
+<td>max</td>
+<td>
+            TEXT
+          </td>
+<td>Required</td>
+<td>Maximum value that the integer can have.</td>
+</tr>
+</table>
+</div>
+     
+ </div>
+<hr>
+<table width="100%" cellspacing="0" border="0"><tr class="address">
+<td width="30%" align="left">Copyright &copy; 2010 Nokia Corporation</td>
+<td width="40%" align="center"></td>
+<td width="30%" align="right"><div align="right">DirectUI</div></td>
+</tr></table>
+</body>
+</html>
